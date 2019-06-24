@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form" method="post">
+        <input type="text" name="name">
+        <input type="file" name="f1" id="">
+        <input type="submit" value="提交">
+    </form>
+    <script>
+        let form = document.getElementById('form');
+        let data = new FormData(form)
+        form.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            fetch('http://localhost:8080/updata',{
+                method: 'post',
+                body: data
+            })
+        })
+    </script>
+</body>
+</html>

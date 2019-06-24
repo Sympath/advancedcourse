@@ -27,7 +27,7 @@ module.exports = (options = {}) => ({
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader', 'postcss-loader']
+        use: ['style-loader', 'css-loader', 'postcss-loader','less-loader']
       },
       {
         test: /\.(png|jpg|jpeg|gif|eot|ttf|woff|woff2|svg|svgz)(\?.+)?$/,
@@ -50,7 +50,10 @@ module.exports = (options = {}) => ({
   ],
   resolve: {
     alias: {
-      '~': resolve(__dirname, 'src')
+      '~': resolve(__dirname, 'src'),
+      'pages':resolve(__dirname,'src/pages'),
+      'components': resolve(__dirname,'src/components'),
+      "utils": resolve(__dirname,'src/utils')
     },
     extensions: ['.js', '.vue', '.json', '.css']
   },

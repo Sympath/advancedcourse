@@ -12,7 +12,7 @@ let store = createStore(counterReducer)
 ReactDOM.render(<App />, document.getElementById('root'));
 function counter(params) {
     ReactDOM.render(<Counter
-        value={store.getState()}
+        value={store.getState       ()}
         onIncrement={() => {
             store.dispatch({ type: 'Increment' })
         }} onDecrement={() => {
