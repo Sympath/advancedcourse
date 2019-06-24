@@ -3,6 +3,8 @@ console.log(process.env.NODE_ENV,"=================");
 
 if(process.env.NODE_ENV === 'production'){
     require('env2')('./.env.prod')
+    
+   
 }else {
     require('env2')('./.env')
 }

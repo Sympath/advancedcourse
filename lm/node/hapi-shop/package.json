@@ -12,6 +12,7 @@
   "dependencies": {
     "env2": "^2.2.2",
     "hapi": "^16.7.0",
+    "mysql": "^2.17.1",
     "mysql2": "^1.6.5",
     "sequelize": "^5.8.12"
   },
