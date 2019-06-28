@@ -62,6 +62,7 @@ export default {
 </script>
 
 <style scoped lang="css">
+/* done樣式 */
 .done {
   text-decoration: line-through;
 }
