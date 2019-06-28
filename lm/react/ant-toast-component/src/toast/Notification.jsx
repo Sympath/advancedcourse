@@ -7,8 +7,12 @@ class Notification extends Component{
     }
     removeNotice = (key)=>{
         const { notices } = this.state;
+        notices = notices.filter(item => {
+            if(item.onClose) item.onClose();
+            return notices.filter(item => item.key != key);
+        })
         this.setState({
-            notices: notices.filter(item => item.key != key)
+            notices
         })
     }
     getNoticeKey=()=>{

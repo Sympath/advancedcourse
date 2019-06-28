@@ -1,0 +1,22 @@
+import * as React from 'react';
+import { Header,About } from "./component";
+
+// export class App extends React.Component {
+
+//     render() {
+//         return (
+//             <div>
+//                 <HelloComponet />
+//             </div>
+//         )
+//     }
+// }
+
+export const App: React.StatelessComponent<{}> = ()=>{
+    return (
+        <div>
+            <Header/>
+            <About/>
+        </div>
+    )
+}

@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import ShopCart from "./ShopCart";
 import LoginStatus from "./LoginStatus";
-import WithLogin from "./WithLogin";
+// import WithLogin from "./WithLogin";
+import ExampleMobx from "./exampleMobx/index";
 
 
 // const WithLoginStatus = WithLogin(LoginStatus);
@@ -15,6 +16,7 @@ function App() {
       <WithShopCart/> */}
       <LoginStatus/>
       <ShopCart/>
+      <ExampleMobx/>
    </React.Fragment>
   );
 }

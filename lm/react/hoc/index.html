@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <span id="val">1</span>
+    <button id="button">+</button>
+    <script>
+        function watch(obj,name,fn) {
+            let value = obj[name];
+             Object.defineProperty(obj, name, {
+                get: function () {
+                    console.log('獲取', value);
+                    return value
+                },
+                set: function (val) {
+
+                    fn(val)
+                    value = val;
+                }
+            })  
+        }
+        
+    </script>
+    <script>
+        let btn = document.getElementById('button');
+        let span = document.getElementById('val')
+        let obj = {
+            value: 1
+        }
+        watch(obj,'value',(val)=>{
+            span.innerHTML = val
+        })
+      
+        btn.onclick = function () {
+            obj.value+=1
+        }
+    </script>
+    <script>
+        var obj3 = {}
+        Object.defineProperty(obj3,'isLogin',{
+            value: true,
+            enumerable: true,
+            writable: true,
+            configurable: true
+        })
+        console.log(obj3);
+        for (const key in obj3) {
+           console.log("key",key);
+           
+        }
+        obj3.isLogin = false;
+        console.log(obj3);
+        
+        
+    </script>
+</body>
+</html>
